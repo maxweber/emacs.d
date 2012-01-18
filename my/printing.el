@@ -1,0 +1,1 @@
+(setq lpr-command "gtklp")
