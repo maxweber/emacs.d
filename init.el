@@ -25,11 +25,7 @@
 (load-my 'anything)
 (load-my 'printing)
 
-;; mail
-(load-my 'mail)
-
 ;; modes
-(load-my 'bbdb)
 (load-my 'highlight-parentheses)
 (load-my 'highlight-symbol)
 (load-my 'magit)
