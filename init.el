@@ -30,8 +30,8 @@
 (load-my 'highlight-symbol)
 (load-my 'magit)
 (load-my 'org)
-(load-my 'ruby)
-(load-my 'highline)
+;;(load-my 'ruby)
+;;(load-my 'highline)
 
 ;; ido
 (load-my 'ido)
@@ -40,7 +40,7 @@
 ;; lisp
 (load-my 'paredit)
 (load-my 'elisp)
-(load-my 'scheme)
-(load-my 'chicken)
+;;(load-my 'scheme)
+;;(load-my 'chicken)
 (load-my 'clojure)
 (load-my 'slime)
