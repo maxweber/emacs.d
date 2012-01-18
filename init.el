@@ -8,7 +8,7 @@
 
 (require 'cl)
 
-(add-to-list 'load-path "/home/syn/.emacs.d/lib")
+(add-to-list 'load-path "~/.emacs.d/lib")
 
 (defun load-my (file)
   (load (concat "~/.emacs.d/my/" (symbol-name file))))
