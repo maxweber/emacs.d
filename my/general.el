@@ -37,3 +37,6 @@
     (toggle-read-only 1)
     (kill-sexp arg)
     (toggle-read-only 0)))
+
+(setq frame-title-format
+      (list '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
