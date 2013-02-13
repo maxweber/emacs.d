@@ -26,8 +26,6 @@
 (load-my 'printing)
 
 ;; modes
-(load-my 'highlight-parentheses)
-(load-my 'highlight-symbol)
 (load-my 'magit)
 (load-my 'org)
 ;;(load-my 'ruby)

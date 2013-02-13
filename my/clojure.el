@@ -5,8 +5,7 @@
 (add-hook 'clojure-mode-hook
           (lambda () 
             (show-paren-mode t)
-            (paredit-mode t)
-            (highlight-parentheses-mode t)))
+            (paredit-mode t)))
 
 (eval-after-load 'clojure-mode
   '(define-clojure-indent
