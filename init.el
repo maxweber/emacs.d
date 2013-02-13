@@ -42,3 +42,4 @@
 ;;(load-my 'chicken)
 (load-my 'clojure)
 (load-my 'slime)
+(load-my 'ssh)
