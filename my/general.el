@@ -40,3 +40,5 @@
 
 (setq frame-title-format
       (list '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+(global-set-key "\M-k" 'copy-sexp)
