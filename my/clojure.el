@@ -16,7 +16,9 @@
      (with 'defun)
      (it 'defun)
      (do-it 'defun)
-     (let-uri-parts 'defun)))
+     (let-uri-parts 'defun)
+     (scenario 'defun)
+     (feature 'defun)))
 
 ;; slime
 (eval-after-load 'slime
