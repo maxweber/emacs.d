@@ -13,16 +13,24 @@
      ;; to the swank server
      (setq slime-net-coding-system 'utf-8-unix)))
 
-(defun slime-connecting (port)
+(defun make-slime-connector (port)
   (lexical-let ((port port))
-      (lambda ()
-        (interactive)
-        (slime-connect "localhost" port))))
+    (lambda ()
+      (interactive)
+      (let ((conn (find port
+                        slime-net-processes
+                        :test (lambda (port conn)
+                                (= port (slime-connection-port conn))))))
+        (if conn
+            (progn
+              (slime-select-connection conn)
+              (pop-to-buffer (slime-repl-buffer))
+              (message "Lisp: %s %s"
+                       (slime-connection-name conn)
+                       (process-contact conn)))
+          (slime-connect "localhost" port))))))
 
-(define-key (current-global-map)
-  (kbd "C-c 1")
-  (slime-connecting 4005))
-
-(define-key (current-global-map)
-  (kbd "C-c 2")
-  (slime-connecting 4006))
+(dolist (num (number-sequence 1 5))
+  (define-key (current-global-map)
+    (read-kbd-macro (concat "C-c " (number-to-string num)))
+    (make-slime-connector (+ 4004 num))))
