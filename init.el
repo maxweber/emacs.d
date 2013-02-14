@@ -14,7 +14,6 @@
   (load (concat "~/.emacs.d/my/" (symbol-name file))))
 
 ;; global
-(load-my 'theme)
 (load-my 'general)
 (load-my 'auto-save)
 (load-my 'keys)
@@ -28,8 +27,6 @@
 ;; modes
 (load-my 'magit)
 (load-my 'org)
-;;(load-my 'ruby)
-;;(load-my 'highline)
 
 ;; ido
 (load-my 'ido)
@@ -38,8 +35,8 @@
 ;; lisp
 (load-my 'paredit)
 (load-my 'elisp)
-;;(load-my 'scheme)
-;;(load-my 'chicken)
 (load-my 'clojure)
-(load-my 'ssh)
 (load-my 'nrepl)
+
+(load-my 'ssh)
+(load-my 'theme)
