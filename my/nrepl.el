@@ -11,7 +11,7 @@
   (with-current-buffer (get-buffer (nrepl-current-connection-buffer))
     nrepl-endpoint))
 
-(defun nrepl-rotate-connections ()
+(defun nrepl-switch-to-next-connection ()
   (interactive)
   (setq nrepl-connection-list
         (append (rest nrepl-connection-list)
@@ -19,4 +19,4 @@
   (message (apply 'format "Active nrepl connection: Host=%s Port=%s"
                   (nrepl-current-connection-infos))))
 
-(global-set-key (kbd "C-c C-x n") 'nrepl-rotate-connections)
+(global-set-key (kbd "C-c C-x n") 'nrepl-switch-to-next-connection)
