@@ -20,3 +20,15 @@
                   (nrepl-current-connection-infos))))
 
 (global-set-key (kbd "C-c C-x n") 'nrepl-switch-to-next-connection)
+
+(defun nrepl-define-connect-keys ()
+  (dolist (n (number-sequence 1 5))
+    (let ((k (concat "C-c " (number-to-string n))))
+      (define-key (current-global-map)
+        (read-kbd-macro k)
+        (lexical-let ((port (+ 4004 n)))
+          (lambda ()
+            (interactive)
+            (nrepl-connect "127.0.0.1" port)))))))
+
+(nrepl-define-connect-keys)
