@@ -11,11 +11,14 @@
   (with-current-buffer (get-buffer (nrepl-current-connection-buffer))
     nrepl-endpoint))
 
+(defun nrepl-rotate-connection-list (connection-list)
+  (append (rest connection-list)
+          (list (first connection-list))))
+
 (defun nrepl-switch-to-next-connection ()
   (interactive)
   (setq nrepl-connection-list
-        (append (rest nrepl-connection-list)
-                (list (first nrepl-connection-list))))
+        (nrepl-rotate-connection-list nrepl-connection-list))
   (message (apply 'format "Active nrepl connection: Host=%s Port=%s"
                   (nrepl-current-connection-infos))))
 
