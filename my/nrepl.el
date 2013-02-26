@@ -4,7 +4,7 @@
 (add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
 (add-hook 'nrepl-mode-hook 'paredit-mode)
 
-(set-variable 'nrepl-use-pretty-printing t)
+(set-variable 'nrepl-use-pretty-printing nil)
 (global-set-key (kbd "C-c M-p") 'nrepl-set-ns)
 
 (defun nrepl-current-connection-infos ()
