@@ -18,7 +18,7 @@
 (defun nrepl-switch-to-next-connection ()
   (interactive)
   (setq nrepl-connection-list
-        (nrepl-rotate-connection-list nrepl-connection-list))
+        (nrepl-rotate-connection-list (delete-dups nrepl-connection-list)))
   (message (apply 'format "Active nrepl connection: Host=%s Port=%s"
                   (nrepl-current-connection-infos))))
 
