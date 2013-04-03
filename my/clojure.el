@@ -19,7 +19,3 @@
      (let-uri-parts 'defun)
      (scenario 'defun)
      (feature 'defun)))
-
-;; slime
-(eval-after-load 'slime
-  '(progn (slime-setup '(slime-repl))))
