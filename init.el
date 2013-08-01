@@ -13,6 +13,10 @@
 (defun load-my (file)
   (load (concat "~/.emacs.d/my/" (symbol-name file))))
 
+;; see https://github.com/purcell/exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; global
 (load-my 'general)
 (load-my 'auto-save)
