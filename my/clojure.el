@@ -1,6 +1,8 @@
 (autoload 'clojure-mode "clojure-mode" "Mode for editing Clojure source files")
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.cljx$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 
 (add-hook 'clojure-mode-hook
           (lambda () 
