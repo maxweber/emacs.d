@@ -40,7 +40,7 @@
 (load-my 'paredit)
 (load-my 'elisp)
 (load-my 'clojure)
-(load-my 'nrepl)
+(load-my 'cider)
 
 (load-my 'ssh)
 (load-my 'theme)
