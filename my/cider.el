@@ -8,6 +8,8 @@
 
 (setq nrepl-buffer-name-show-port t)
 
+(setq cider-repl-display-in-current-window nil)
+
 (global-set-key (kbd "C-c M-p") 'cider-repl-set-ns)
 
 (global-set-key (kbd "C-c C-x n") 'cider-rotate-connection)
