@@ -21,3 +21,24 @@
      (let-uri-parts 'defun)
      (scenario 'defun)
      (feature 'defun)))
+
+;; from http://stackoverflow.com/questions/9288181/converting-from-camelcase-to-in-emacs#answer-25886353
+(defun toggle-camelcase-dashes ()
+  "Toggle between camcelcase and dash notation for the symbol at point."
+  (interactive)
+  (save-excursion
+    (let* ((bounds (bounds-of-thing-at-point 'symbol))
+           (start (car bounds))
+           (end (cdr bounds))
+           (currently-using-underscores-p (progn (goto-char start)
+                                                 (re-search-forward "-" end t))))
+      (if currently-using-underscores-p
+          (progn
+            (upcase-initials-region start end)
+            (replace-string "-" "" nil start end)
+            (downcase-region start (1+ start)))
+        (replace-regexp "\\([A-Z]\\)" "-\\1" nil (1+ start) end)
+        (downcase-region start end)))))
+
+(global-unset-key (kbd "C-q"))
+(global-set-key (kbd "C-q C-d") 'toggle-camelcase-dashes)
