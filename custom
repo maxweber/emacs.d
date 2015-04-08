@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
  '(custom-safe-themes (quote ("649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
+ '(safe-local-variable-values (quote ((eval define-clojure-indent (phase-context 2) (defmethod-plan 2)) (eval define-clojure-indent (def-collect-plan-fn (quote defun))) (eval define-clojure-indent (defplan (quote defun)) (def-aggregate-plan-fn (quote defun))) (eval define-clojure-indent (clj-action (quote defun)) (implement-action 4)) (eval define-clojure-indent (cluster-spec 1) (group-spec 1)))))
  '(send-mail-function (quote smtpmail-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

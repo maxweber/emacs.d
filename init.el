@@ -4,6 +4,9 @@
  'package-archives
  '("marmalade" . "http://marmalade-repo.org/packages/"))
 
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
 (package-initialize)
 
 (require 'cl)
@@ -41,6 +44,7 @@
 (load-my 'elisp)
 (load-my 'clojure)
 (load-my 'cider)
+(load-my 'clj-refactor)
 
 (load-my 'ssh)
 (load-my 'theme)
