@@ -12,7 +12,7 @@
 
 (global-set-key (kbd "C-c M-p") 'cider-repl-set-ns)
 
-(global-set-key (kbd "C-c C-x n") 'cider-rotate-connection)
+(global-set-key (kbd "C-.") 'cider-rotate-connection)
 
 (defun cider-define-connect-keys ()
   (dolist (n (number-sequence 1 9))
