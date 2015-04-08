@@ -6,8 +6,6 @@
  org-hide-leading-stars t
  org-odd-levels-only t)
 
-(org-remember-insinuate)
-
 (setq
  org-directory "~/org"
  org-default-notes-file "notes.org"
