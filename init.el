@@ -44,3 +44,4 @@
 
 (load-my 'ssh)
 (load-my 'theme)
+(load-my 'xml)
