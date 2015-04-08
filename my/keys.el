@@ -8,7 +8,8 @@
          ("S-<up>" . windmove-up)
          ("S-<down>" . windmove-down)
          ("S-<right>" . windmove-right)
-         ("S-<left>" . windmove-left))))
+         ("S-<left>" . windmove-left)
+         ("M-#" . fixup-whitespace))))
 
   (dolist (key keys)
     (define-key (current-global-map)
