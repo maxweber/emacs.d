@@ -25,3 +25,5 @@
             (process-buffer (cider-connect "127.0.0.1" port))))))))
 
 (cider-define-connect-keys)
+
+(set-variable 'cider-stacktrace-frames-background-color "#232830")
