@@ -56,7 +56,7 @@
        (selection "#ebcb8b") ;; tab-control-dirty-tab-close-button
        (secondary-selection "#bf616a") ;; tab-control-hover-tab-close-button
        (foreground "#ffffff")
-       (comment "#4f5b67") ;; table-row
+       (comment "#9db3c9") ;; table-row
        (red "#bf616a") ;; tab-control-hover-tab-close-button
        (orange "#DCA432") ;; darker tab-control-dirty-tab-close-butto
        (yellow "#ebcb8b") ;; tab-control-dirty-tab-close-button
