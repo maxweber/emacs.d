@@ -12,7 +12,11 @@
 
 (global-set-key (kbd "C-c M-p") 'cider-repl-set-ns)
 
+(global-set-key (kbd "M-ö") 'cider-repl-previous-matching-input)
+
 (global-set-key (kbd "C-.") 'cider-rotate-connection)
+
+(global-set-key (kbd "C-x p") 'cider-repl-toggle-pretty-printing)
 
 (defun cider-define-connect-keys ()
   (dolist (n (number-sequence 1 9))
