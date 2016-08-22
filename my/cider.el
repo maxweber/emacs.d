@@ -1,7 +1,7 @@
 (unless (package-installed-p 'cider)
   (package-install 'cider))
 
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'eldoc-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 
 (setq nrepl-hide-special-buffers t)
