@@ -25,10 +25,3 @@
   (insert
    "(do
      (set! *print-length* 20))"))
-
-(defun app-reset ()
-  (interactive)
-  (insert
-   "(nosnapshots.system/restart)"))
-
-(global-set-key (kbd "C-c M-r") 'app-reset)
