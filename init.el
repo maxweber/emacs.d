@@ -23,6 +23,8 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+(require 'cl)
+
 (add-to-list 'load-path "~/.emacs.d/lib")
 
 (defun load-my (file)
