@@ -25,7 +25,6 @@
 (load-my 'general)
 (load-my 'auto-save)
 (load-my 'keys)
-(load-my 'scpaste)
 (load-my 'hippie-expand)
 (load-my 'browse-url)
 (load-my 'smooth-scrolling)
