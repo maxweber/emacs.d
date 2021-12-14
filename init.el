@@ -52,6 +52,16 @@
 (load-my 'xml)
 (load-my 'rgrep)
 
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
+(add-hook 'json-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))
+
 ;; avoids "too long for Unix domain socket" on ssh over tramp (see
 ;; also
 ;; https://lists.gnu.org/archive/html/bug-gnu-emacs/2015-01/msg00890.html):
