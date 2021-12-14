@@ -3,5 +3,3 @@
 (ido-mode t)
 (ido-everywhere t)
 
-(require 'ido-ubiquitous)
-(ido-ubiquitous-mode t)
