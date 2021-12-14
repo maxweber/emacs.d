@@ -51,3 +51,8 @@
 (load-my 'theme)
 (load-my 'xml)
 (load-my 'rgrep)
+
+;; avoids "too long for Unix domain socket" on ssh over tramp (see
+;; also
+;; https://lists.gnu.org/archive/html/bug-gnu-emacs/2015-01/msg00890.html):
+(setq tramp-use-ssh-controlmaster-options nil)
