@@ -1,5 +1,5 @@
 ; list the packages you want (see: https://stackoverflow.com/a/10093312)
-(setq package-list '(paredit color-theme))
+(setq package-list '(paredit color-theme nord-theme yaml-mode use-package))
 
 (require 'package)
 
