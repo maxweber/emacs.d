@@ -28,7 +28,6 @@
 (load-my 'hippie-expand)
 (load-my 'browse-url)
 (load-my 'smooth-scrolling)
-(load-my 'anything)
 (load-my 'printing)
 
 ;; modes
