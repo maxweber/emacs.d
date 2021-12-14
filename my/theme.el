@@ -1,8 +1,3 @@
-(require 'color-theme)
-;(load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-
-;(color-theme-blackboard)
-
 ;; necessary since Emacs 27, see: https://emacs.stackexchange.com/a/52804
 (setq custom--inhibit-theme-enable nil)
 
