@@ -56,3 +56,11 @@
 ;; also
 ;; https://lists.gnu.org/archive/html/bug-gnu-emacs/2015-01/msg00890.html):
 (setq tramp-use-ssh-controlmaster-options nil)
+
+;; Emacs tends to get super slow, if there are very long text lines
+;; (like Clojure REPL output of a long sequence). If you use
+;; profiler-start move the text cursor on a long text line, you see
+;; that line-move-visual needs the most computing power. See
+;; https://groups.google.com/forum/#!topic/gnu.emacs.help/vZKrLfxPI7E
+;; and http://ergoemacs.org/emacs/emacs_line_move_visual.html
+;; (setq line-move-visual nil)
