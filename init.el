@@ -45,7 +45,6 @@
 (load-my 'elisp)
 (load-my 'clojure)
 (load-my 'cider)
-(load-my 'clj-refactor)
 
 (load-my 'shortcuts)
 (load-my 'ssh)
