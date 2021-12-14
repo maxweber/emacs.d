@@ -31,3 +31,9 @@
 (cider-define-connect-keys)
 
 (set-variable 'cider-stacktrace-frames-background-color "#232830")
+
+;; prefer the code navigation of lsp-mode
+(eval-after-load "cider-mode"
+  '(define-key cider-mode-map (kbd "M-.") nil))
+;; method found here: https://emacsredux.com/blog/2013/09/25/removing-key-bindings-from-minor-mode-keymaps/
+
