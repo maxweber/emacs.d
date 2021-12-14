@@ -93,3 +93,5 @@
 
 (global-set-key (kbd "\C-c q") 'xref-find-references) ;; finds usages of a symbol
 
+;; mouse support for emacs -nw
+(xterm-mouse-mode 1)
