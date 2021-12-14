@@ -1,3 +1,6 @@
+; list the packages you want (see: https://stackoverflow.com/a/10093312)
+(setq package-list '(paredit color-theme))
+
 (require 'package)
 
 (add-to-list 'package-archives
@@ -8,9 +11,17 @@
 
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
+;; activate all the packages (in particular autoloads)
 (package-initialize)
 
-(require 'cl)
+;; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 (add-to-list 'load-path "~/.emacs.d/lib")
 
