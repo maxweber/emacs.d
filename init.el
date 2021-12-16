@@ -1,5 +1,5 @@
 ; list the packages you want (see: https://stackoverflow.com/a/10093312)
-(setq package-list '(paredit nord-theme yaml-mode use-package))
+(setq package-list '(paredit nord-theme yaml-mode use-package ido-ubiquitous))
 
 (require 'package)
 
