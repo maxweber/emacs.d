@@ -1,3 +1,5 @@
+(require 'grep)
+
 (defun current-word-rgrep ()
   "setting up grep-command using current word under cursor as a search string"
   (interactive)
